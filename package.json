@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "prettier": "^3.6.2"
+  },
+  "name": "nodejs-project",
+  "version": "1.0.0",
+  "description": "this is nodejs project",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "src/index.js"
+  },
+  "author": "Vishal Baghel",
+  "license": "ISC"
+}
