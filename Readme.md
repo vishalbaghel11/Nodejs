@@ -36,7 +36,7 @@ backend-project/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/your-backend-project.git
+   git clone https://github.com/vishalbaghel11/Nodejs
    cd your-backend-project
    ```
 
@@ -60,7 +60,7 @@ backend-project/
    npm run dev
    ```
 
-   Server runs at: `http://localhost:5000`
+   Server runs at: `http://localhost:8000`
 
 ---
 
@@ -83,8 +83,3 @@ backend-project/
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
