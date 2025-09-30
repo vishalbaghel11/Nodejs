@@ -1,12 +1,11 @@
-// utils/appError.js
 export class ApiError extends Error {
   constructor(message, statusCode) {
-    super(message);           // Call parent constructor (Error)
-    this.statusCode = statusCode || 500; // Default 500
-    this.success = false;     // Optional flag for API responses
-    this.isOperational = true; // Mark this error as "expected" (vs programming errors)
+    super(message);          
+    this.statusCode = statusCode || 500; 
+    this.success = false;    
+    this.isOperational = true; 
     
-    Error.captureStackTrace(this, this.constructor); // Keeps stack trace clean
+    Error.captureStackTrace(this, this.constructor); 
   }
 }
 export default ApiError;
