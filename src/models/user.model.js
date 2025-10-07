@@ -24,15 +24,16 @@ const userSchema = new mongoose.Schema(
     },
     avatar: {
       type: String, // Cloudinary or file URL
+      required: true,
     },
     coverImage: {
-      type: String,
+      type: String, 
     },
     password: {
       type: String,
-      required: true,
+      required: [true,'Password is required '],
       minlength: 6,
-      select: false, // password won’t be returned in queries
+      select: false, // password won’t be re  turned in queries
     },
     refreshToken: {
       type: String,

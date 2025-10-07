@@ -2,38 +2,25 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./db/index.js";
-
-
-
-
-
+// import { errorHandler } from "./middlewares/errorHandler.js";
+// import userRoutes from "./routes/user.js";
 dotenv.config();
-
-
 const app = express();
-
-
 connectDB();
-
-
 app.use(cors());           
 app.use(express.json());    
 app.use(express.urlencoded({ extended: true })); 
 
-app.post('/api/users/register', (req, res) => {
-  // console.log("req come at register endpoint");
-  const data = req.body;
-  console.log(data)
-  res.status(200).json({ message: "Register endpoint hit successfully"});
-});  
+import userRouter from "./routers/user.router.js";
 
-console.log("in app page")
+
+
+app.post('/api/users/register', userRouter);  
+// 👍😉
+// console.log("in app page")
 
 app.get("/", (req, res) => {
   res.send(" API is running...");
 });
-
-
-
-
+// app.use(errorHandler);
 export default app;
